@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient File</title>
+  <link rel="stylesheet" href="Bootstrap/bootstrap.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-light nav1">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Patient File</a>
+
+        <button class="btn" id="btn4"><span> <img src="icon/up.png"> A</span> ADD FACILITY</button>
+      </div>
+    </nav>
+    <div class="area">
+
+      <section class="container">
+        <div>
+          <h5 class="py-2">Last Name</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="All" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h5 class="py-2">First Name</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="All" />
+             </div>
+            </div>
+          </form>
+        </div>
+        
+        <div>
+          <h5 class="py-2">Policy#</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="All" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div>
+          <h5 class="py-2">Pat.Chart#</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="All" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h5 class="py-2">DOB</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="All"/>
+                <span class="input-group-append">
+                  <span class="input-group-text bg-#DCDCDC d-block">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        
+
+        <!-- <div class="btn1">
+          <button class="btn" id="btn2"><i class="fa fa-search" style="color: white;"></i> Search</button>
+          <button class="btn" id="btn3"><i class="fa fa-ban" style="color: white;"></i> Clear</button>
+        </div> -->
+
+
+      </section>
+
+      <section class="container">
+        <div>
+          <h5 class="py-2">Mobile#</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="(___)___-____" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h5 class="py-2">Telephone#</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="(___)___-____" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div>
+          <h5 class="py-2">Work#</h5>
+          <form class="row">
+            <div class="col-3">
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" id="date" placeholder="(___)___-____" />
+             </div>
+            </div>
+          </form>
+        </div>
+
+
+        <section class="container">
+          <div class="form-check flex">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
+            <label class="form-check-label mt--10" for="flexRadioDefault1">
+             <h5 class="py-1 brown ">Include Inactive </h5>
+            </label>
+          </div>
+         
+          <div class="form-check flex">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label class="form-check-label mt--10" for="flexRadioDefault2">
+              <h5 class="py-1 brown"> Exclude Inactive </h5>
+            </label>
+          </div>
+        </section>
+        
+        <div class="py-2" id="btnside">
+          <button class="btn" id="btn2"><span>- S</span> SEARCH</button>
+            <button class="btn" id="btn3"><span>- C</span> CLEAR</button>
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="m-4">
+
+
+    <table id="tbstud">
+      <tr>
+        <th class="column_heading" style="border-top-left-radius: 5px;">Action</th>
+        <th class="column_heading">Last Name</th>
+        <th class="column_heading">First Name</th>
+        <th class="column_heading">Gender</th>
+        <th class="column_heading">IsActive</th>
+        <th class="column_heading">Address</th>
+        <th class="column_heading">Policy</th>
+        <th class="column_heading">Telephone</th>
+        <th class="column_heading">Sent By</th>
+        <th class="column_heading flex justify-content-around align-items-center" style="border-top-right-radius: 5px;">Pat.Chart# <button type="button"
+            class="btn"> <img src="icon/settings.png" height="15" width="15"></button></th>
+      </tr>
+
+
+      <tr class="customer_row">
+       <td class="left">
+          <input type="image" class="iicon" src="icon/edit.png"> 
+          <input type="image" class="iicon" src="icon/bin.png">
+        </td>
+        <td>JACKSON</td>
+        <td>HUGH</td>
+        <td>M</td>
+        <td>Y</td>
+        <td>301 FLAT </td>
+        <td>001200213</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>KUMAR  </td>
+         <td>PRAVEEN</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>96354</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>KUMAR  </td>
+         <td>PRAVEEN</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>96354</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>KUMAR  </td>
+         <td>PRAVEEN</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>96354</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+     <tr class="customer_row">
+       <td class="left">
+          <input type="image" class="iicon" src="icon/edit.png"> 
+          <input type="image" class="iicon" src="icon/bin.png">
+        </td>
+        <td>JACKSON</td>
+        <td>HUGH</td>
+        <td>M</td>
+        <td>Y</td>
+        <td>301 FLAT </td>
+        <td>001200213</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+
+      <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+       <tr class="customer_row">
+        <td class="left">
+           <input type="image" class="iicon" src="icon/edit.png"> 
+           <input type="image" class="iicon" src="icon/bin.png">
+         </td>
+         <td>JACKSON</td>
+         <td>HUGH</td>
+         <td>M</td>
+         <td>Y</td>
+         <td>301 FLAT </td>
+         <td>001200213</td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+
+      
+    </table>
+
+  </div>
+
+
+  <div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-light spc">
+      <div class="container-fluid">
+        
+    <div class="pagination p1">
+      <ul>
+        <a href="#" class="arw"><li><</li></a>
+        <a class="is-active" href="#"><li>1</li></a>
+        <a href="#"><li>2</li></a>
+        <a href="#"><li>3</li></a>
+        <a href="#"><li>4</li></a>
+        <a href="#"><li>5</li></a>
+        <a href="#" class="arw"><li>></li></a>
+      </ul>
+
+      <div class="pagination p1">
+        <b class="trs">Total Records: <span style="color:black"> 220</span></b>
+        </div>
+    </div>
+
+    
+
+
+    <div class="footerbtn">
+
+    <div class="dropdown">
+      <button class="btn5 btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        15
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
+      </div>
+    </div>
+
+    
+    <div class="btn2">
+      <button class="btn" id="btn0"><span>- J</span> EXPORT</button>
+    </div>
+
+  </div>
+
+    
+ 
+      </div>
+    </nav>
+  </div>
+
+
+</body>
+
+</html>
